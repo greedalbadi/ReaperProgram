@@ -1,0 +1,53 @@
+For scanning commands:
+
+    Ip Port scanning:
+        scan (ip or site domain) (starting port) (ending port)
+        Example command:
+            scan 0.0.0.0 20 90
+
+    Admin panel scanning:
+        pscan (site url) (Max thread is optional)
+
+        Example command:
+            pscan https://example.com
+
+
+    Domain scanning:
+        dom (site name) (site protocol)
+
+            Example command:
+                dom youtube https
+    Banner lookup:
+        bn (ip) (port)
+        Example command:
+            bn 0.0.0.0 22
+System:
+    clear command:
+        cls
+    Control cmd:
+        cmd (you're command)
+        Example command:
+            cmd ipconfig
+    Ping a site:
+        ping (site url) (ping's count)
+    Search if word in file:
+        is (file_name) (word)
+Request info:
+    get default ip:
+        gog
+    Request ip info:
+        ip (target ip)
+        Example:
+            ip 0.0.0.0
+    Request json data:
+        gs  (url) (save (optional))
+    Request Res headers:
+        gh  (url) (save (optional))
+    Request content:
+        gc  (url) (save (optional))
+    Request status code:
+        gsc (url) (save (optional))
+    Request site ip:
+        gwi (url)
+        Example:
+            gwi google.com
