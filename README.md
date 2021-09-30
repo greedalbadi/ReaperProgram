@@ -4,9 +4,7 @@
 
 ##   About.
 
-Reaper program made for penetration testing, The program based on simple structure that anyone could upgrade and use,
-
-The current version of the program not completed, This program support linux & windows.
+Reaper program made for penetration testing, The program based on simple structure that anyone could upgrade and use, The current version of the program not completed, This program support linux & windows.
 
 
 
@@ -21,7 +19,7 @@ The current version of the program not completed, This program support linux & w
 | Title               | command | arguments                                         | Windows | Linux |
 | ------------------- | ------- | ------------------------------------------------- | ------- | ----- |
 | Scan ip port's      | scan    | (ip or site domain) (starting port) (ending port) | yes     | yes   |
-| Admin paned finder  | pscan   | (site url) (max thread (optional))                | yes     | yes   |
+| Admin panel finder  | pscan   | (site url) (max thread (optional))                | yes     | yes   |
 | Domain scanner      | dom     | (site name) (site protocol)                       | yes     | yes   |
 | Banner finder       | bn      | (ip) (port)                                       | yes     | yes   |
 | Clear console       | cls     | None                                              | yes     | yes   |
@@ -36,11 +34,11 @@ The current version of the program not completed, This program support linux & w
 | Request site ip     | gwi     | (url)                                             | yes     | yes   |
 |                     |         |                                                   |         |       |
 
-### 
-
 
 
 ## Dependencies installation.
+
+This program is made with python 3.9.7
 
 cd to the same dir as the program files then:
 
@@ -49,3 +47,4 @@ pip install -r requirements.txt
 python run.py
 ```
 
+This program uses MIT License.
