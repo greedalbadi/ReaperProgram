@@ -34,17 +34,7 @@ Reaper program made for penetration testing, The program based on simple structu
 | Request site ip     | gwi     | (url)                                             | yes     | yes   |
 |                     |         |                                                   |         |       |
 
-
-
-<<<<<<< HEAD
 ## installation.
-=======
-## Dependencies installation.
-
-This version made with python 3.9.7
-
-cd to the same dir as the program files then:
->>>>>>> b586f5bd94fc979b885324426d8642842e65b57a
 
 ```bash
 git clone https://github.com/greedalbadi/ReaperProgram.git
