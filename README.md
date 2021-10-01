@@ -39,11 +39,11 @@ Reaper program made for penetration testing, The program based on simple structu
 ```bash
 git clone https://github.com/greedalbadi/ReaperProgram.git
 cd ReaperProgram
-pip install -r requirements.txt
+setup.bat
 python run.py
 ```
 
-## uninstalling
+## uninstalling.
 
 ```
 python uninstall.py
