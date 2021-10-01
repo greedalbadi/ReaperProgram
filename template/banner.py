@@ -1,7 +1,18 @@
 from colorama import Fore as f
-import os
+import os, json
+def Getdisplay():
+    try:
+        file = open("template/version.json", "r")
+        data = json.loads(file.read())
+        file.close()
+        version = data["data"][0]["version"]
+        title = data["data"][0]["title"]
+        return [title, f" {version}"]
+    except Exception as e:
+        print(e)
+        return ["Reaper", "v unknown"]
 def banner():
-    os.system("title Reaper")
+    os.system(f"title {Getdisplay()[0]}{Getdisplay()[1]}")
     print(f"""
     {f.LIGHTCYAN_EX}        [+]Github: Greedalbadi
     {f.LIGHTWHITE_EX}                   ...
@@ -26,6 +37,6 @@ def banner():
     {f.LIGHTWHITE_EX}      `:::::`::::::::;' /  / `:#
     {f.LIGHTWHITE_EX}       ::::::`:::::;'  /  /   `#
     
-    {f.LIGHTCYAN_EX}    [+] v1.0         [+] Help 
+    {f.LIGHTCYAN_EX}    [+]{Getdisplay()[1]}         [+] Help 
     {f.WHITE}
     """)
