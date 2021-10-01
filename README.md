@@ -43,4 +43,12 @@ pip install -r requirements.txt
 python run.py
 ```
 
+## uninstalling
+
+```
+python uninstall.py
+```
+
+
+
 This program uses MIT License.
