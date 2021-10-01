@@ -36,13 +36,11 @@ Reaper program made for penetration testing, The program based on simple structu
 
 
 
-## Dependencies installation.
-
-This program is made with python 3.9.7
-
-cd to the same dir as the program files then:
+## installation.
 
 ```bash
+git clone https://github.com/greedalbadi/ReaperProgram.git
+cd ReaperProgram
 pip install -r requirements.txt
 python run.py
 ```
