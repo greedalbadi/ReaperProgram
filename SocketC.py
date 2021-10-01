@@ -12,11 +12,14 @@ class SocketCommands:
             except Exception as e:
                 return e
         def PortScanner(self, user_input):
-            target = SocketCommands.Checkip(self, user_input[1])
-            target = gethostbyname(target)
-            print('scan started', target)
-            for port in range(int(user_input[2]), int(user_input[3])):
-                threading.Thread(target=SocketCommands.Scan, args=[self, port, target]).start()
+            try:
+                target = SocketCommands.Checkip(self, user_input[1])
+                target = gethostbyname(target)
+                print('scan started', target)
+                for port in range(int(user_input[2]), int(user_input[3])):
+                    threading.Thread(target=SocketCommands.Scan, args=[self, port, target]).start()
+            except Exception as e:
+                return e
         def Scan(self, port, target):
             self.active_thread += 1
             s = socket(AF_INET, SOCK_STREAM)
