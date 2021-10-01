@@ -10,7 +10,10 @@ class Main_class:
             return "Error: Banner not found."
     def Main(self):
         while True:
-            user_input = [input("")]
-            res = self.filter.Filter(user_input)
-            if res != None:
-                print(res)
+            try:
+                user_input = [input("")]
+                res = self.filter.Filter(user_input)
+                if res != None:
+                    print(res)
+            except:
+                pass
