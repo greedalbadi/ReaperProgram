@@ -75,7 +75,6 @@ class Requestportscanner:
         self.SystemCommands = SystemC.System_Commands()
         self.active_threads = 0
     def Panelscanner(self, user_input):
-        print("Panel search started.")
         link = user_input[1]
         try:
             require_threads = user_input[2]
@@ -83,6 +82,7 @@ class Requestportscanner:
         except IndexError:
             exists = False
         file = open("template/panel.txt")
+        print("Panel search started.")
         for path in file.read().splitlines():
             if not path.startswith("/") and not link.endswith("/"):
                 path = "/" + path
