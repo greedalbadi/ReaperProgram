@@ -1,14 +1,20 @@
-import  RequestsC, SystemC, SocketC
+import  RequestsC, SystemC, SocketC, IinjC
 
 class Filter_class:
     def __init__(self):
+        self.files = SystemC.Fiels()
         self.request = RequestsC.RequestsCommands()
+        self.imageinj = IinjC.Imageinj()
         self.request_S = RequestsC.RequestsScanners()
         self.system = SystemC.System_Commands()
         self.request_pannel_scanner = RequestsC.Requestportscanner()
         self.sockets = SocketC.SocketCommands()
         self.commands = {
             "cmd": self.system.Cmd,
+            "ab": self.imageinj.Apbytes,
+            "rs": self.imageinj.Restoredata,
+            "rb": self.files.Readbytes,
+            "irb": self.imageinj.Readinj,
             'dom': self.request_S.Domainscanner,
             "cls": self.system.Clear,
             "is": self.system.Wordsearch,
