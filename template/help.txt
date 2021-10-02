@@ -21,6 +21,15 @@ For scanning commands:
         bn (ip) (port)
         Example command:
             bn 0.0.0.0 22
+Files:
+    inject jpg image with files:
+        ab (jpg image name) (target file)
+    Read jpg injection:
+        irb (jpg image name)
+    Read files bytes:
+        rb (file name)
+    Search if word in file:
+        is (file_name) (word)
 System:
     clear command:
         cls
@@ -30,8 +39,6 @@ System:
             cmd ipconfig
     Ping a site:
         ping (site url) (ping's count)
-    Search if word in file:
-        is (file_name) (word)
 Request info:
     get default ip:
         gog
