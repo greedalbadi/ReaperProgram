@@ -94,13 +94,15 @@ class Requestportscanner:
     def panel(self,link, path):
         self.active_threads += 1
         try:
-            request = requests.get(url=link, headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36'})
+            request = requests.get(url=link, headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36'}, allow_redirects=False, timeout=15)
             status = request.status_code
             if status == 200:
                 print(f"[+] Checked: {path} - status: {status}")
                 print(self.SystemCommands.Quicksave(request.url))
+        except requests.exceptions.Timeout:
+            pass
         except Exception as e:
-            print(e)
+            print(f"ERROR: {e}")
         self.active_threads = self.active_threads - 1
 
         if self.active_threads == 0:
