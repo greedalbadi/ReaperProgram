@@ -29,13 +29,13 @@ class System_Commands:
             return e
     def Quicksave(self, content):
         try:
-            date = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
-            file_name = "quicksave".join(date)
+            date = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+            file_name = "".join(date)
             file = open(f"{file_name}.txt", "w")
             file.write(content)
             file.flush()
             file.close()
-            return "Saved with quick save."
+            return f"Saved as {file.name}"
         except Exception as e:
             return e
     def Save_content(self, content):
