@@ -59,3 +59,13 @@ class System_Commands:
                     return f"{users_input[2]}\n Found in line {line}\nline: {snt}"
         except Exception as e:
             return e
+class Fiels:
+    def Readbytes(self, user_input):
+        try:
+            file_name = user_input[1]
+            file = open(file_name, "rb")
+            filebytes = file.read()
+            file.close()
+            return filebytes
+        except Exception as e:
+            return e
