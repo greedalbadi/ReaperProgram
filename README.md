@@ -36,6 +36,7 @@ Reaper program made for penetration testing, The program based on simple structu
 | Read files bytes            | rb      | (file name)                                       | yes     | yes   |
 | Read jpg injection          | irb     | (jpg image name)                                  | yes     | yes   |
 | inject jpg image with files | ab      | (jpg image name) (target file)                    | yes     | yes   |
+| DDos                        | slay    | (host) (port) (thread count)                      | yes     | yes   |
 
 ## installation.
 
