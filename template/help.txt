@@ -21,6 +21,8 @@ For scanning commands:
         bn (ip) (port)
         Example command:
             bn 0.0.0.0 22
+Attack:
+     slay (host) (port) (thread count)
 Files:
     inject jpg image with files:
         ab (jpg image name) (target file)
