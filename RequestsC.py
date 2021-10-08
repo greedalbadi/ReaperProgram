@@ -10,7 +10,7 @@ class RequestsCommands:
             print(content)
             try:
                 if user_input[2] == "save":
-                    self.SystemCommands.Save_content(content)
+                    self.SystemCommands.Quicksave(content)
             except IndexError:
                 pass
         except Exception as e:
@@ -24,7 +24,7 @@ class RequestsCommands:
                   )
             try:
                 if user_input[2] == "save":
-                    self.SystemCommands.Save_content(headers)
+                    self.SystemCommands.Quicksave(headers)
             except IndexError:
                 pass
             try:
@@ -52,7 +52,7 @@ class RequestsCommands:
             data = r.json()
             try:
                 if user_input[2] == "save":
-                    self.SystemCommands.Save_content(data)
+                    self.SystemCommands.Quicksave(data)
             except IndexError:
                 pass
             return json.dumps(data, indent=1)
@@ -64,7 +64,7 @@ class RequestsCommands:
             status = r.status_code
             try:
                 if user_input[2] == "save":
-                    self.SystemCommands.Save_content(f"{status}")
+                    self.SystemCommands.Quicksave(f"{status}")
             except IndexError:
                 pass
             return status
@@ -99,7 +99,7 @@ class Requestportscanner:
             if status == 200:
                 print(f"[+] Checked: {path} - status: {status}")
                 print(self.SystemCommands.Quicksave(request.url))
-        except requests.exceptions.Timeout:
+        except requests.Timeout:
             pass
         except Exception as e:
             print(f"ERROR: {e}")
