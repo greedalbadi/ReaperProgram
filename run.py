@@ -1,4 +1,4 @@
-import manage, SystemC, os, subprocess
+import manage, SystemC
 class runner_class:
     def __init__(self):
         self.manage = manage.Main_class()
