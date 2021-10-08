@@ -34,7 +34,7 @@ class slay_attack:
                     print("didn't send.")
                 server.close()
             except socket.error:
-                print(f"{host} be dead.")
+                print(f"{host} may be dead.")
 
     def Ready(self, user_input):
         s = slay_attack
