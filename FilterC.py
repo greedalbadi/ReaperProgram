@@ -1,4 +1,4 @@
-import  RequestsC, SystemC, SocketC, IinjC, moves
+import RequestsC, SystemC, SocketC, IinjC, moves
 
 class Filter_class:
     def __init__(self):
@@ -15,13 +15,17 @@ class Filter_class:
             "slay": self.slay.Ready,
             "ab": self.imageinj.Apbytes,
             "rs": self.imageinj.Restoredata,
+            "me": self.system.Iconfig,
+            "mc": self.system.Arp,
             "rb": self.files.Readbytes,
             "irb": self.imageinj.Readinj,
             'dom': self.request_S.Domainscanner,
             "cls": self.system.Clear,
+            "clear": self.system.Clear,
             "is": self.system.Wordsearch,
             "ping": self.system.Ping,
             "gog": self.sockets.Get_og,
+            "fuc": self.sockets.Focus,
             "bn": self.sockets.Getbanner,
             "scan": self.sockets.PortScanner,
             "gc": self.request.Get_content,
@@ -32,6 +36,8 @@ class Filter_class:
             "gwi": self.sockets.pageip,
             "gs": self.request.Getjsondata,
             "help": self.system.help,
+            "-h": self.system.help,
+            "h": self.system.help,
         }
     def Filter(self, user_input):
         try:

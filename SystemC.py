@@ -27,27 +27,27 @@ class System_Commands:
             return "Ended."
         except Exception as e:
             return e
+    def Arp(self, *args):
+        try:
+            os.system("arp -a")
+        except Exception as e:
+            return e
     def Quicksave(self, content):
         try:
             date = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
             file_name = "".join(date)
-            file = open(f"{file_name}.txt", "w")
+            file = open(f"output/{file_name}.txt", "w")
             file.write(content)
             file.flush()
             file.close()
             return f"Saved as {file.name}"
         except Exception as e:
             return e
-    def Save_content(self, content):
-        try:
-            name = input("Save as: ")
-            file = open(name, "w")
-            file.write(content)
-            file.flush()
-            file.close()
-            return "Content saved."
-        except Exception as e:
-            return e
+    def Iconfig(self, *args):
+        if os.name == "nt":
+            os.system("ipconfig")
+        else:
+            os.system("ifconfig")
     def Wordsearch(self, users_input):
         try:
             line = 0
