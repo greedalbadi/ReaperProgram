@@ -39,6 +39,8 @@ Reaper program made for penetration testing, The program based on simple structu
 | DDos                            | slay    | (host) (port) (thread count)                      | yes     | yes   |
 | if/ipconfig                     | me      | None                                              | yes     | yes   |
 | list network connected mac addr | mc      | None                                              | yes     | no    |
+| Remote Desktop Brute force      | rdcrack | a:(ip or name) u:(user) p:(password list)         | no      | yes   |
+| Remote Desktop Connect          | rdcon   | (ip) (user:password)                              | no      | yes   |
 
 
 
