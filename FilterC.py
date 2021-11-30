@@ -1,7 +1,8 @@
-import RequestsC, SystemC, SocketC, IinjC, moves
-
+import RequestsC, SystemC, SocketC, IinjC, moves, Remote
 class Filter_class:
     def __init__(self):
+        self.rdpcrack = Remote.Rdp_breach()
+        self.rdpconnect = Remote.Rdp_connect()
         self.slay = moves.slay_attack()
         self.files = SystemC.Fiels()
         self.request = RequestsC.RequestsCommands()
@@ -11,6 +12,8 @@ class Filter_class:
         self.request_pannel_scanner = RequestsC.Requestportscanner()
         self.sockets = SocketC.SocketCommands()
         self.commands = {
+            "rdcon": self.rdpconnect.Filter_info,
+            "rdcrack": self.rdpcrack.Valuesfix,
             "cmd": self.system.Cmd,
             "slay": self.slay.Ready,
             "ab": self.imageinj.Apbytes,
