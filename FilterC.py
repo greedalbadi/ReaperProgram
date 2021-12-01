@@ -38,9 +38,6 @@ class Filter_class:
             "pscan": self.request_pannel_scanner.Panelscanner,
             "gwi": self.sockets.pageip,
             "gs": self.request.Getjsondata,
-            "help": self.system.help,
-            "-h": self.system.help,
-            "h": self.system.help,
         }
     def Filter(self, user_input):
         try:

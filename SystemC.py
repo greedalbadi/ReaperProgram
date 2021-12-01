@@ -13,12 +13,6 @@ class System_Commands:
             os.system('clear ')
         if os.path.isfile("template/banner.py"):
             return template.banner.banner()
-    def help(self, *args):
-        try:
-            help_file = open("template/help.txt", "r")
-            return help_file.read()
-        except Exception as e:
-            return e
     def Ping(self, user_input):
         try:
             browser = user_input[1]
