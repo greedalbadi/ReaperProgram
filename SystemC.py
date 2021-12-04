@@ -1,11 +1,18 @@
 import os, datetime, template.banner
-import subprocess
+import subprocess, json
 
 class System_Commands:
     def Cmd(self, users_input):
         users_input.remove(users_input[0])
         res = subprocess.call(users_input)
         return res
+    def Version(self, *args):
+        file = open("template/version.json", "r")
+        data = json.loads(file.read())
+        file.close()
+        version = data["data"][0]["version"]
+        title = data["data"][0]["title"]
+        return f"Title =>> {title}\nVersion =>> {version}"
     def Clear(self, *args):
         if os.name == 'nt':
             os.system("cls")

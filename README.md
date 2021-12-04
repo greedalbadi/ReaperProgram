@@ -18,6 +18,7 @@ Reaper program made for penetration testing, The program based on simple structu
 
 | Title                           | command | arguments                                         | Windows | Linux |
 | ------------------------------- | ------- | ------------------------------------------------- | ------- | ----- |
+| Get version & title             | v       | None                                              | yes     | yes   |
 | Scan ip port's                  | scan    | (ip or site domain) (starting port) (ending port) | yes     | yes   |
 | Admin panel finder              | pscan   | (site url) (max thread (optional))                | yes     | yes   |
 | Domain scanner                  | dom     | (site name) (site protocol)                       | yes     | yes   |

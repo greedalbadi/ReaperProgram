@@ -16,6 +16,8 @@ class Filter_class:
             "payload": self.payload.Valuescheck,
             "rdcon": self.rdpconnect.Filter_info,
             "rdcrack": self.rdpcrack.Valuesfix,
+            "v": self.system.Version,
+            "V": self.system.Version,
             "cmd": self.system.Cmd,
             "slay": self.slay.Ready,
             "ab": self.imageinj.Apbytes,
