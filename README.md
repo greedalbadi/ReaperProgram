@@ -41,6 +41,7 @@ Reaper program made for penetration testing, The program based on simple structu
 | list network connected mac addr | mc      | None                                              | yes     | no    |
 | Remote Desktop Brute force      | rdcrack | a:(ip or name) u:(user) p:(password list)         | no      | yes   |
 | Remote Desktop Connect          | rdcon   | (ip) (user:password)                              | no      | yes   |
+| Run shell payload               | payload | f:(file name)                                     | yes     | yes   |
 
 
 

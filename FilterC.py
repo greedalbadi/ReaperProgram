@@ -1,6 +1,7 @@
-import RequestsC, SystemC, SocketC, IinjC, moves, Remote
+import RequestsC, SystemC, SocketC, IinjC, moves, Remote, Payload
 class Filter_class:
     def __init__(self):
+        self.payload = Payload.Payload_runner()
         self.rdpcrack = Remote.Rdp_breach()
         self.rdpconnect = Remote.Rdp_connect()
         self.slay = moves.slay_attack()
@@ -12,6 +13,7 @@ class Filter_class:
         self.request_pannel_scanner = RequestsC.Requestportscanner()
         self.sockets = SocketC.SocketCommands()
         self.commands = {
+            "payload": self.payload.Valuescheck,
             "rdcon": self.rdpconnect.Filter_info,
             "rdcrack": self.rdpcrack.Valuesfix,
             "cmd": self.system.Cmd,
