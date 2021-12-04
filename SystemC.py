@@ -1,10 +1,11 @@
 import os, datetime, template.banner
-
+import subprocess
 
 class System_Commands:
     def Cmd(self, users_input):
-        command = f"{users_input[1]}"
-        return os.system(command)
+        users_input.remove(users_input[0])
+        res = subprocess.call(users_input)
+        return res
     def Clear(self, *args):
         if os.name == 'nt':
             os.system("cls")
