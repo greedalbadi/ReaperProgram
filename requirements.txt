@@ -4,7 +4,9 @@ colorama==0.4.4
 DateTime==4.3
 idna==3.2
 IPy==1.1
+prettytable==2.4.0
 pytz==2021.1
 requests==2.26.0
 urllib3==1.26.7
+wcwidth==0.2.5
 zope.interface==5.4.0
