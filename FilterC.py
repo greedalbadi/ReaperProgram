@@ -16,6 +16,7 @@ class Filter_class:
         self.sockets = SocketC.SocketCommands()
         self.commands = {
             "gap": self.wifipoint.Process,
+            "exit": self.system.Exit,
             "ips": self.Iprangscan.Filter_info,
             "payload": self.payload.Valuescheck,
             "rdcon": self.rdpconnect.Filter_info,

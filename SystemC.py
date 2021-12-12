@@ -1,11 +1,15 @@
 import os, datetime, template.banner
 import subprocess, json
+import sys
+
 
 class System_Commands:
     def Cmd(self, users_input):
         users_input.remove(users_input[0])
         res = subprocess.call(users_input)
         return res
+    def Exit(self, *args):
+        os._exit(0)
     def Version(self, *args):
         file = open("template/version.json", "r")
         data = json.loads(file.read())
