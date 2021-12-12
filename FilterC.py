@@ -1,6 +1,8 @@
-import RequestsC, SystemC, SocketC, IinjC, moves, Remote, Payload
+import RequestsC, SystemC, SocketC, IinjC, moves, Remote, Payload, rscan, Wifipoint
 class Filter_class:
     def __init__(self):
+        self.wifipoint = Wifipoint.AccessPointGenerat()
+        self.Iprangscan = rscan.Ip_range_scanner()
         self.payload = Payload.Payload_runner()
         self.rdpcrack = Remote.Rdp_breach()
         self.rdpconnect = Remote.Rdp_connect()
@@ -13,6 +15,8 @@ class Filter_class:
         self.request_pannel_scanner = RequestsC.Requestportscanner()
         self.sockets = SocketC.SocketCommands()
         self.commands = {
+            "gap": self.wifipoint.Process,
+            "ips": self.Iprangscan.Filter_info,
             "payload": self.payload.Valuescheck,
             "rdcon": self.rdpconnect.Filter_info,
             "rdcrack": self.rdpcrack.Valuesfix,
