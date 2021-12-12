@@ -75,7 +75,7 @@ class SocketCommands:
                     start = time.time()
                     target = user_input[1]
                     port = user_input[2]
-                    print(f"focusing daemon thread started at host: {target}| port: {port}..")
+                    print(f"focusing thread started at host: {target}| port: {port}..")
                     while True:
                         try:
                             s = socket(AF_INET, SOCK_STREAM)
@@ -87,4 +87,4 @@ class SocketCommands:
                             print(e)
                 except Exception as e:
                     return e
-            return threading.Thread(target=fuc, args=[user_input], daemon=True).start()
+            return threading.Thread(target=fuc, args=[user_input]).start()
