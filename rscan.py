@@ -29,7 +29,10 @@ class Ip_range_scanner:
             return f"ping {ip} -c 1"
     def Getmac(self, ip):
         address = get_mac_address(ip=ip)
-        return address
+        if address == None:
+            return "Not Found"
+        else:
+            return address
     def scanner(self, ip, rang):
         print("Scanning network..")
         ip = ip[:-1]
