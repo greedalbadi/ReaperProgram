@@ -9,12 +9,13 @@ class Scan_info:
     shell = True
     Prot = "http://"
     RDP_port = 3389
+    SSH_port = 22
 class Ip_range_scanner:
     def __init__(self):
         self.os = os.name
         self.Activethreads = 0
-        self.table = PrettyTable(["Address", "Hostname", "Browser", "RDP", "MAC"])
-    def Rdpcheck(self, target, port):
+        self.table = PrettyTable(["Address", "Hostname", "Browser", "RDP", "MAC", "SSH"])
+    def portscan(self, target, port):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(3)
         conn = s.connect_ex((target, port))
@@ -66,7 +67,8 @@ class Ip_range_scanner:
         if res.returncode == 0:
             browser = Ip_range_scanner.Checkbrowser(self, ip)
             hostname = Ip_range_scanner.Gethostname(self, ip)
-            RDP = Ip_range_scanner.Rdpcheck(self, ip, Scan_info.RDP_port)
+            RDP = Ip_range_scanner.portscan(self, ip, Scan_info.RDP_port)
+            ssh = Ip_range_scanner.portscan(self, ip, Scan_info.SSH_port)
             mac = Ip_range_scanner.Getmac(self, ip)
-            self.table.add_row([ip, hostname, browser, RDP, mac])
+            self.table.add_row([ip, hostname, browser, RDP, mac, ssh])
         self.Activethreads -= 1
